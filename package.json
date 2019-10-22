@@ -1,0 +1,22 @@
+{
+  "name": "javascriptlibraries",
+  "version": "1.0.1",
+  "description": "",
+  "main": "stringLibraries.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephanieCherubin/javascriptLibraries.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephanieCherubin/javascriptLibraries/issues"
+  },
+  "homepage": "https://github.com/StephanieCherubin/javascriptLibraries#readme",
+  "dependencies": {
+    "npm": "^6.10.1"
+  }
+}
