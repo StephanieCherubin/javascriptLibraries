@@ -78,7 +78,7 @@ Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyph
 const arrayOfObjects = [
   { ' ': '-' }
 ]
-var sentence1 = 'PROTEIN IS THE BUILDING BLOCK OF THE BODY'
+var sentence1 = 'PROTEIN SOURCES ARE THE BUILDING BLOCKS OF A HEALTHY DIET'
 sentence1 = sentence1.toLowerCase()
 const result1 = arrayOfObjects.reduce((f, s) => `${f}`.replace(Object.keys(s)[0], s[Object.keys(s)[0]]), sentence1)
 

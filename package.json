@@ -1,6 +1,6 @@
 {
-  "name": "javascriptlibraries",
-  "version": "1.0.1",
+  "name": "string-substitution",
+  "version": "1.0.2",
   "description": "",
   "main": "stringLibraries.js",
   "scripts": {
