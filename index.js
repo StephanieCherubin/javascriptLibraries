@@ -69,17 +69,31 @@ const removeExtraSpaces = (string) => {
   const noExtraSpaces = finalString.slice(0, -1).trim()
   return noExtraSpaces
 }
-
-console.log(removeExtraSpaces(" help me "))
+// This doesn't work when spaces are in middle
+console.log(removeExtraSpaces(" Shadow  DOM  serves for encapsulation "))
 
 /*
-Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyphen "-", and makes all characters lowercase.
- */
-const arrayOfObjects = [
-  { ' ': '-' }
-]
-var sentence1 = 'PROTEIN SOURCES ARE THE BUILDING BLOCKS OF A HEALTHY DIET'
-sentence1 = sentence1.toLowerCase()
-const result1 = arrayOfObjects.reduce((f, s) => `${f}`.replace(Object.keys(s)[0], s[Object.keys(s)[0]]), sentence1)
+Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyphen
+*/
 
-console.log(result1)
+const protein_source = 'PROTEIN SOURCES ARE THE BUILDING BLOCKS OF A HEALTHY DIET'
+
+const kabobCase = protein_source.split(' ').join('-').toLowerCase();
+
+console.log(kabobCase)
+/* Challenge 6 snakeCase() - Removes extra space and replaces spaces with an underscore "_", and makes all characters lowercase.
+Example: " what the heck " -> "what_the_heck"
+Strategies:
+Follow the example above and use the '_' instead of the '-'.
+*/
+const javascript_equals_sign = 'Triple equals checks for strict equality, which means both the type and value must be the same'
+
+const snakeCase = javascript_equals_sign.split(' ').join('_').toLowerCase();
+
+console.log(snakeCase)
+/*
+Challenge 7 camelCase() - Lowercases the first character of the first word. Then uppercases the first character of all other words, and removes all spaces.
+Example: Camel Case -> camelCase
+Strategies:
+Use the ideas from capitalizeWords() function you wrote earlier. str.split() the string on the ' ' to get and array of words. Then loop starting on index 1 (you could use array.map()) and capitalize each word (use your function for this) then array.join() on the '' (empty string).
+*/
