@@ -16,7 +16,10 @@ String.prototype.capitalize = function () {
 allCaps() - makes all characters uppercase */
 
 const allCaps = (str) => str.toUpperCase();
-// console.log(allCaps("hello lady"))
+
+module.exports.allCaps = allCaps
+
+console.log(allCaps('hello lady'));
 
 /* Challenge 3
 capitalizeWords() - makes the first character of each word uppercase.
