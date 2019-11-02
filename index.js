@@ -2,28 +2,16 @@
 Write a function that uppercases the first character of string */
 const firstUpper = (string) => // javascript libraries
   string.charAt(0).toUpperCase() + string.slice(1);
-console.log(firstUpper("hello girl"))
-
-// Here's another way
-String.prototype.capitalize = function () {
-  return this.charAt(0).toUpperCase() + this.slice(1);
-};
-console.log("hello boy".capitalize())
-
+module.exports.firstUpper = firstUpper
 
 /* Challenge 2
 allCaps() - makes all characters uppercase */
-
 const allCaps = (str) => str.toUpperCase();
-
 module.exports.allCaps = allCaps
-
-console.log(allCaps('hello lady'));
 
 /* Challenge 3
 capitalizeWords() - makes the first character of each word uppercase.
 Imagine that each word is separated by a space. */
-
 const capitalizeWords = (string) => {
   const wordList = string.split(' ');
   let finalString = '';
@@ -34,13 +22,11 @@ const capitalizeWords = (string) => {
   return finalString.slice(0, -1);
 };
 
-console.log(capitalizeWords('just do it'));
-module.exports.allCaps = capitalizeWords
+module.exports.capitalizeWords = capitalizeWords
 
 /* Advanced
 capitalizeHeadline() -
 capitalizes all of the words except the articles: the, in, a, an, and, but, for, of, at, by, from */
-
 const capitalizeHeadline = (str) => {
   const articles = ['an', 'the', 'in', 'is', 'a', 'and', 'but', 'for', 'of', 'at', 'by'];
   return str.toLowerCase().split(' ').map((word) => {
@@ -50,9 +36,8 @@ const capitalizeHeadline = (str) => {
     return word.replace(word[0], word[0].toUpperCase());
   }).join(' ');
 };
-
-module.exports.capitalizeHeadline = capitalizeHeadline;
 console.log(capitalizeHeadline('munchausen syndrome by proxy is an unusual name for a cat'));
+module.exports.capitalizeHeadline = capitalizeHeadline;
 
 /*
 Challenge 4
@@ -77,12 +62,10 @@ console.log(removeExtraSpaces(' Shadow  DOM  serves for encapsulation '));
 /*
 Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyphen
 */
-
 const proteinSource = 'PROTEIN SOURCES ARE THE BUILDING BLOCKS OF A HEALTHY DIET';
-
 const kabobCase = proteinSource.split(' ').join('-').toLowerCase();
+console.log(proteinSource);
 
-console.log(kabobCase);
 /* Challenge 6 snakeCase() - Removes extra space and replaces spaces with an underscore "_", and makes all characters lowercase.
 Example: " what the heck " -> "what_the_heck"
 Strategies:
@@ -93,6 +76,7 @@ const javascriptEqualsSign = 'Triple equals checks for strict equality, which me
 const snakeCase = javascriptEqualsSign.split(' ').join('_').toLowerCase();
 
 console.log(snakeCase);
+
 /*
 Challenge 7 camelCase() -
 Lowercases the first character of the first word.
