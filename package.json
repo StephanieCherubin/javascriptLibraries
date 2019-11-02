@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/StephanieCherubin/javascriptLibraries#readme",
   "dependencies": {
+    "eslint-plugin-jest": "^23.0.2",
+    "https-proxy-agent": "^3.0.1",
     "npm": "^6.12.0"
   },
   "devDependencies": {
