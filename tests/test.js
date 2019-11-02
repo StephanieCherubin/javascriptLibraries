@@ -5,6 +5,5 @@ test('sanity check', () => {
 });
 
 test('title case', () => {
-
-  expect(titleCase('munchausen syndrome by proxy is an unusual name for a cat')).toBe('Munchausen Syndrome by Proxy is an Unusual Name for a Cat');
-})
+  expect(lib.titleCase('munchausen syndrome by proxy is an unusual name for a cat')).toBe('Munchausen Syndrome by Proxy is an Unusual Name for a Cat');
+});
