@@ -41,20 +41,18 @@ console.log(capitalizeWords('just do it'));
 capitalizeHeadline() -
 capitalizes all of the words except the articles: the, in, a, an, and, but, for, of, at, by, from */
 
-const titleCase = (str) => {
+const capitalizeHeadline = (str) => {
   const articles = ['an', 'the', 'in', 'a', 'and', 'but', 'for', 'of', 'at', 'by'];
   return str.toLowerCase().split(' ').map((word) => {
-    // for (let i = 0; i < articles.length; i += 1) {
     if (articles.includes(word)) {
       return word;
     }
     return word.replace(word[0], word[0].toUpperCase());
-    // }
   }).join(' ');
 };
 
-module.exports.titleCase = titleCase;
-console.log(titleCase('munchausen syndrome by proxy is an unusual name for a cat'));
+module.exports.capitalizeHeadline = capitalizeHeadline;
+console.log(capitalizeHeadline('munchausen syndrome by proxy is an unusual name for a cat'));
 
 /*
 Challenge 4
