@@ -4,14 +4,12 @@ module.exports = {
         "node": true,
         "jest/globals": true
     },
-    "extends": {
-        "airbnb-base",
-        "plugin:jest/all"
-    }
+    "extends": "airbnb-base",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    "extends": ["plugin:jest/all"],
     "parserOptions": {
         "ecmaVersion": 2018
     },
