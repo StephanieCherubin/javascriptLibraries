@@ -1,15 +1,14 @@
 /* Challenge 1
 Write a function that uppercases the first character of string */
 const firstUpper = (string) => // javascript libraries
-  string.charAt(0).toUpperCase() + string.slice(1)
-;
-// console.log(firstUpper("hello girl"))
+  string.charAt(0).toUpperCase() + string.slice(1);
+console.log(firstUpper("hello girl"))
 
 // Here's another way
 String.prototype.capitalize = function () {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
-// console.log("hello boy".capitalize())
+console.log("hello boy".capitalize())
 
 
 /* Challenge 2
@@ -28,7 +27,7 @@ Imagine that each word is separated by a space. */
 const capitalizeWords = (string) => {
   const wordList = string.split(' ');
   let finalString = '';
-  wordList.forEach((word, _) => {
+  wordList.forEach((word) => {
     const result = firstUpper(word);
     finalString = finalString.concat(result, ' ');
   });
@@ -36,13 +35,14 @@ const capitalizeWords = (string) => {
 };
 
 console.log(capitalizeWords('just do it'));
+module.exports.allCaps = capitalizeWords
 
 /* Advanced
 capitalizeHeadline() -
 capitalizes all of the words except the articles: the, in, a, an, and, but, for, of, at, by, from */
 
 const capitalizeHeadline = (str) => {
-  const articles = ['an', 'the', 'in', 'a', 'and', 'but', 'for', 'of', 'at', 'by'];
+  const articles = ['an', 'the', 'in', 'is', 'a', 'and', 'but', 'for', 'of', 'at', 'by'];
   return str.toLowerCase().split(' ').map((word) => {
     if (articles.includes(word)) {
       return word;
