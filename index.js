@@ -53,11 +53,11 @@ const removeExtraSpaces = (string) => {
     finalString = finalString.concat(result, ' ');
   });
 
-  const noExtraSpaces = finalString.slice(0, -1).trim();
+  const noExtraSpaces = finalString.replace( /\s\s+/g, ' ' ).trim();
   return noExtraSpaces;
 };
-// This doesn't work when spaces are in middle
-console.log(removeExtraSpaces(' Shadow  DOM  serves for encapsulation '));
+
+console.log(removeExtraSpaces('    Shadow      DOM  serves for encapsulation '));
 
 /*
 Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyphen
