@@ -21,4 +21,8 @@ describe('test suite', () => {
     expect(lib.capitalizeHeadline('munchausen syndrome by proxy is an unusual name for a cat')).toBe('Munchausen Syndrome by Proxy is an Unusual Name for a Cat');
   });
 
+  it('removeExtraSpaces function', () => {
+    expect.hasAssertions();
+    expect(lib.removeExtraSpaces('    Shadow      DOM  serves for encapsulation ')).toBe('Shadow DOM Serves For Encapsulation');
+  });
 });
