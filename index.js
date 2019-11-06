@@ -57,13 +57,15 @@ const removeExtraSpaces = (string) => {
   return noExtraSpaces;
 };
 
-console.log(removeExtraSpaces('    Shadow      DOM  serves for encapsulation '));
+console.log(removeExtraSpaces('    CSV stands for comma  separated  values '));
 module.exports.removeExtraSpaces = removeExtraSpaces;
 /*
 Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyphen
 */
 const proteinSource = 'Protein Sources Are the Building Blocks of a Healthy Diet';
+
 const kabobCase = (string) => string.split(' ').join('-');
+
 console.log(kabobCase(proteinSource));
 module.exports.kabobCase = kabobCase;
 

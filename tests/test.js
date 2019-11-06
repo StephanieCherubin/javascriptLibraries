@@ -23,6 +23,21 @@ describe('test suite', () => {
 
   it('removeExtraSpaces function', () => {
     expect.hasAssertions();
-    expect(lib.removeExtraSpaces('    Shadow      DOM  serves for encapsulation ')).toBe('Shadow DOM Serves For Encapsulation');
+    expect(lib.removeExtraSpaces('    CSV stands for comma  separated  values ')).toBe('CSV stands for comma separated values');
   });
+
+  it('kabobCase function', () => {
+    expect.hasAssertions();
+    expect(lib.kabobCase('Protein Sources Are the Building Blocks of a Healthy Diet')).toBe('Protein-Sources-Are-the-Building-Blocks-of-a-Healthy-Diet');
+  })
+
+  it('snakeCase function', () => {
+    expect.hasAssertions();
+    expect(lib.snakeCase('Triple equals checks for strict equality, which means both the type and value must be the same')).toBe('triple_equals_checks_for_strict_equality,_which_means_both_the_type_and_value_must_be_the_same')
+  })
+
+  it('camelCase function', () => {
+    expect.hasAssertions();
+    expect(lib.camelCase('the event loop handles all async callbacks')).toBe('theEventLoopHandlesAllAsyncCallbacks')
+  })
 });
