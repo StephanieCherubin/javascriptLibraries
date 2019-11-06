@@ -88,3 +88,13 @@ str.split() the string on the ' ' to get and array of words.
 Then loop starting on index 1 (you could use array.map())
 and capitalize each word (use your function for this)then array.join() on the '' (empty string).
 */
+
+const eventLoop = 'the event loop handles all async callbacks'
+
+function camelCase(eventLoop) {
+  return eventLoop.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+    return index == 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, '');
+}
+
+console.log(camelCase(eventLoop));
