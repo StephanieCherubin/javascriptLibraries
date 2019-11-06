@@ -49,8 +49,8 @@ const removeExtraSpaces = (string) => {
   const wordList = string.split(' ');
   let finalString = '';
   wordList.forEach((word, _) => {
-    const result = firstUpper(word);
-    finalString = finalString.concat(result, ' ');
+    // const result = firstUpper(word);
+    finalString = finalString.concat(word, ' ');
   });
 
   const noExtraSpaces = finalString.replace( /\s\s+/g, ' ' ).trim();
@@ -58,6 +58,7 @@ const removeExtraSpaces = (string) => {
 };
 
 module.exports.removeExtraSpaces = removeExtraSpaces;
+// console.log(removeExtraSpaces('    CSV stands for comma  separated  values '))
 /*
 Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyphen
 */
