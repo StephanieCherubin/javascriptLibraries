@@ -6,7 +6,7 @@ module.exports.firstUpper = firstUpper
 
 /* Challenge 2
 allCaps() - makes all characters uppercase */
-const allCaps = (str) => str.toUpperCase();
+const allCaps = (string) => string.toUpperCase();
 module.exports.allCaps = allCaps
 
 /* Challenge 3
@@ -27,16 +27,16 @@ module.exports.capitalizeWords = capitalizeWords
 /* Advanced
 capitalizeHeadline() -
 capitalizes all of the words except the articles: the, in, a, an, and, but, for, of, at, by, from */
-const capitalizeHeadline = (str) => {
+const capitalizeHeadline = (string) => {
   const articles = ['an', 'the', 'in', 'is', 'a', 'and', 'but', 'for', 'of', 'at', 'by'];
-  return str.toLowerCase().split(' ').map((word) => {
+  return string.toLowerCase().split(' ').map((word) => {
     if (articles.includes(word)) {
       return word;
     }
     return word.replace(word[0], word[0].toUpperCase());
   }).join(' ');
 };
-console.log(capitalizeHeadline('munchausen syndrome by proxy is an unusual name for a cat'));
+
 module.exports.capitalizeHeadline = capitalizeHeadline;
 
 /*
@@ -58,13 +58,14 @@ const removeExtraSpaces = (string) => {
 };
 
 console.log(removeExtraSpaces('    Shadow      DOM  serves for encapsulation '));
-
+module.exports.removeExtraSpaces = removeExtraSpaces;
 /*
 Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyphen
 */
-const proteinSource = 'PROTEIN SOURCES ARE THE BUILDING BLOCKS OF A HEALTHY DIET';
-const kabobCase = proteinSource.split(' ').join('-').toLowerCase();
-console.log(proteinSource);
+const proteinSource = 'Protein Sources Are the Building Blocks of a Healthy Diet';
+const kabobCase = (string) => string.split(' ').join('-');
+console.log(kabobCase(proteinSource));
+module.exports.kabobCase = kabobCase;
 
 /* Challenge 6 snakeCase() - Removes extra space and replaces spaces with an underscore "_", and makes all characters lowercase.
 Example: " what the heck " -> "what_the_heck"
@@ -73,9 +74,8 @@ Follow the example above and use the '_' instead of the '-'.
 */
 const javascriptEqualsSign = 'Triple equals checks for strict equality, which means both the type and value must be the same';
 
-const snakeCase = javascriptEqualsSign.split(' ').join('_').toLowerCase();
-
-console.log(snakeCase);
+const snakeCase = (string) => string.split(' ').join('_').toLowerCase()
+console.log(snakeCase(javascriptEqualsSign));
 
 /*
 Challenge 7 camelCase() -
@@ -91,10 +91,9 @@ and capitalize each word (use your function for this)then array.join() on the ''
 
 const eventLoop = 'the event loop handles all async callbacks'
 
-function camelCase(eventLoop) {
-  return eventLoop.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+const camelCase = (string) =>  string.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
     return index == 0 ? word.toLowerCase() : word.toUpperCase();
   }).replace(/\s+/g, '');
-}
+
 
 console.log(camelCase(eventLoop));
