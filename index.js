@@ -49,7 +49,6 @@ const removeExtraSpaces = (string) => {
   const wordList = string.split(' ');
   let finalString = '';
   wordList.forEach((word, _) => {
-    // const result = firstUpper(word);
     finalString = finalString.concat(word, ' ');
   });
 
@@ -58,11 +57,10 @@ const removeExtraSpaces = (string) => {
 };
 
 module.exports.removeExtraSpaces = removeExtraSpaces;
-// console.log(removeExtraSpaces('    CSV stands for comma  separated  values '))
+
 /*
 Challenge 5 kabobCase() - Removes extra spaces and replaces spaces with the hyphen
 */
-// const proteinSource = 'Protein Sources Are the Building Blocks of a Healthy Diet';
 
 const kabobCase = (string) => string.split(' ').join('-');
 
@@ -73,10 +71,9 @@ Example: " what the heck " -> "what_the_heck"
 Strategies:
 Follow the example above and use the '_' instead of the '-'.
 */
-// const javascriptEqualsSign = 'Triple equals checks for strict equality, which means both the type and value must be the same';
+
 
 const snakeCase = (string) => string.split(' ').join('_').toLowerCase()
-// console.log(snakeCase(javascriptEqualsSign));
 module.exports.snakeCase = snakeCase;
 /*
 Challenge 7 camelCase() -
@@ -90,12 +87,9 @@ Then loop starting on index 1 (you could use array.map())
 and capitalize each word (use your function for this)then array.join() on the '' (empty string).
 */
 
-// const eventLoop = 'the event loop handles all async callbacks'
-
 const camelCase = (string) =>  string.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
     return index == 0 ? word.toLowerCase() : word.toUpperCase();
   }).replace(/\s+/g, '');
 
 
-// console.log(camelCase(eventLoop));
 module.exports.camelCase = camelCase;
