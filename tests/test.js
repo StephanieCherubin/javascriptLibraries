@@ -1,4 +1,4 @@
-const lib = require('../index');
+const lib = require('../src/index');
 
 describe('test suite', () => {
   it('firstUpper function', () => {
