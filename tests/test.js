@@ -40,4 +40,10 @@ describe('test suite', () => {
     expect.hasAssertions();
     expect(lib.camelCase('the event loop handles all async callbacks')).toBe('theEventLoopHandlesAllAsyncCallbacks')
   })
-});
+
+  it('toTitleCase function', () => {
+    expect.hasAssertions();
+    expect(lib.toTitleCase('some-mixed_string with spaces_underscores-and-hyphens')).toBe('Some Mixed String With Spaces Underscores And Hyphens')
+  })
+
+})
