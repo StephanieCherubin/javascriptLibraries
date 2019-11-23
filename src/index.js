@@ -1,5 +1,5 @@
 /* Challenge 1
-Write a function that uppercases the first character of string */
+Uppercases the first character of string */
 var firstUpper = function (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 };
@@ -64,14 +64,6 @@ var snakeCase = function (string) { return string.split(' ').join('_').toLowerCa
 module.exports.snakeCase = snakeCase;
 /*
 Challenge 7 camelCase() -
-Lowercases the first character of the first word.
-Then uppercases the first character of all other words, and removes all spaces.
-Example: Camel Case -> camelCase
-Strategies:
-Use the ideas from capitalizeWords() function you wrote earlier.
-str.split() the string on the ' ' to get and array of words.
-Then loop starting on index 1 (you could use array.map())
-and capitalize each word (use your function for this)then array.join() on the '' (empty string).
 */
 var camelCase = function (string) { return string.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
     return index == 0 ? word.toLowerCase() : word.toUpperCase();
