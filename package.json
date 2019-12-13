@@ -29,7 +29,7 @@
   "dependencies": {
     "eslint-plugin-jest": "^23.0.2",
     "https-proxy-agent": "^3.0.1",
-    "npm": "^6.12.0"
+    "npm": "^6.13.4"
   },
   "devDependencies": {
     "coveralls": "^3.0.7",
