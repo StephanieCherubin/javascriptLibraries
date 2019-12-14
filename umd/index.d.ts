@@ -1,8 +1,9 @@
-declare const firstUpper: (string: any) => any;
-declare const allCaps: (string: any) => any;
-declare const capitalizeWords: (string: any) => string;
-declare const capitalizeHeadline: (string: any) => any;
-declare const removeExtraSpaces: (string: any) => string;
-declare const kabobCase: (string: any) => any;
-declare const snakeCase: (string: any) => any;
-declare const camelCase: (string: any) => any;
+declare const firstUpper: (str: string) => string;
+declare const allCaps: (str: string) => string;
+declare const capitalizeWords: (str: string) => string;
+declare const capitalizeHeadline: (str: string) => string;
+declare const removeExtraSpaces: (str: string) => string;
+declare const kabobCase: (str: string) => string;
+declare const snakeCase: (str: string) => string;
+declare const camelCase: (str: string) => string;
+declare const toTitleCase: (str: string) => string;
