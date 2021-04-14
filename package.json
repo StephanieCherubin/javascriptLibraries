@@ -9,11 +9,12 @@
     "emd/*"
   ],
   "scripts": {
-    "prepare": "rollup --config",
+    "prepare": "npm run snyk-protect && rollup --config",
     "test": "jest",
     "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:coverage": "npm test -- --coverage",
-    "test:badges": "npm run test:coverage  && jest-coverage-badges"
+    "test:badges": "npm run test:coverage  && jest-coverage-badges",
+    "snyk-protect": "snyk protect"
   },
   "types": "esm/index.d.ts",
   "repository": {
@@ -52,5 +53,6 @@
   "directories": {
     "test": "tests"
   },
-  "keywords": []
+  "keywords": [],
+  "snyk": true
 }
