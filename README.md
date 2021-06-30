@@ -6,7 +6,6 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/StephanieCherubin/javascriptLibraries/graphs/commit-activity)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
 [![GitHub license](https://img.shields.io/github/license/StephanieCherubin/javascriptLibraries)](https://github.com/StephanieCherubin/javascriptLibraries/blob/master/LICENSE)
-[![HitCount](http://hits.dwyl.io/StephanieCherubin/javascriptLibraries.svg)](http://hits.dwyl.io/StephanieCherubin/javascriptLibraries)
 
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
 
